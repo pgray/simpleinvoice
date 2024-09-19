@@ -59,7 +59,7 @@
 	framexleftmargin=2.4em,
 	showstringspaces=false,
 	language=TeX,
-	morekeywords={\documentclass,\begin,\end,\usepackage,\makeinvoice,\setinvoicetitle,\setinvoicenumber,\setreceivername,\setreceiveraddress,\setname,\setaddress,\setphonenumber,\setemail,\setyourref,\setourref,\setinvoicedate,\setdeadline,\additem,\setsubtotal,\setvat,\settotal,\setaccountnumber, \setsummary, \setcurrency, \setvattext, \setaccounttext},
+	morekeywords={\documentclass,\begin,\end,\usepackage,\makeinvoice,\setinvoicetitle,\setlogo,\setinvoicenumber,\setreceivername,\setreceiveraddress,\setname,\setaddress,\setphonenumber,\setemail,\setyourref,\setourref,\setinvoicedate,\setdeadline,\additem,\setsubtotal,\setvat,\settotal,\setaccountnumber, \setsummary, \setcurrency, \setvattext, \setaccounttext},
 	commentstyle=\color{source_brown}\ttfamily,
 	keywordstyle=\color{source_blue}\ttfamily,
 	stringstyle=\color{source_orange},
@@ -159,6 +159,13 @@ Overrides the standard title of the invoice. Optional command. Takes one argumen
 Example:
 \begin{lstlisting}
 \setinvoicetitle{My invoice}
+\end{lstlisting}
+
+\subsection{{\textbackslash}setlogo}
+Sets a logo filename to be read from the current directory. Optional command. Takes one argument: the logo filename without extension.
+Example (if filename was logo.png):
+\begin{lstlisting}
+\setlogo{logo}
 \end{lstlisting}
 
 \subsection{{\textbackslash}setinvoicenumber} \label{par:setinvoicenumber}
@@ -324,6 +331,7 @@ Following are two different invoices. First, we create the invoice specified in 
 \setcurrency{USD}
 
 \setinvoicetitle{My Invoice}
+\setlogo{logo}
 \setinvoicenumber{42}
 
 \setreceivername{Person McNameface}

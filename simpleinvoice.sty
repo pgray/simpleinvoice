@@ -185,10 +185,12 @@
 \newcommand{\setcurrency}[1]{\def \INV@text@currency {\ #1}}
 \newcommand{\setvattext}[1]{\def \INV@text@vat {#1}}
 \newcommand{\setaccounttext}[1]{\def \INV@text@accountnum {#1}}
+\newcommand{\setlogo}[1]{\def \INV@content@logo} {#1}}
 
 % Make invoice function
 \def \makeinvoice {
 	\begin{minipage}[b]{0.5\textwidth}
+		\ifdef{\INV@content@logo}{\begin{flushleft}\includegraphics{\INV@content@logo}\end{flushleft}}{}
 		{\large \textbf{\INV@content@toname}} \\
 		\INV@content@toaddr
 	\end{minipage}
